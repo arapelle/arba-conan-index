@@ -1,0 +1,7 @@
+sources:
+  "0.1.0":
+    url:
+      - "https://github.com/arapelle/arba-hash/archive/refs/tags/0.1.0.zip"
+      
+    sha256: "7f639cf9c5899cd036bf9d2feae5a5c005884596e14cb35d66d970b22f1a7672"
+    
