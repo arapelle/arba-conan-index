@@ -4,9 +4,8 @@ from conan import ConanFile
 from conan.tools.cmake import CMake, cmake_layout
 from conan.tools.build import can_run
 
-required_conan_version = ">=2.2.0"
 
-class TestbenchTestConan(ConanFile):
+class helloTestConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
     generators = "CMakeDeps", "CMakeToolchain"
     win_bash = os.environ.get('MSYSTEM', None) is not None
@@ -24,5 +23,5 @@ class TestbenchTestConan(ConanFile):
 
     def test(self):
         if can_run(self):
-            cmd = os.path.join(self.cpp.build.bindir, "test_package")
+            cmd = os.path.join(self.cpp.build.bindir, "example")
             self.run(cmd, env="conanrun")

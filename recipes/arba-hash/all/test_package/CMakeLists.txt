@@ -1,24 +1,8 @@
 cmake_minimum_required(VERSION 3.15)
-
 project(PackageTest CXX)
 
-set(test_program "test_package")
-add_executable(${test_program}
-    test_package.cpp
-)
+find_package(arba-hash CONFIG REQUIRED)
 
-set(lib_namespace "arba")
-set(lib_base_name "hash")
-find_package(${lib_namespace}-${lib_base_name} CONFIG REQUIRED)
-
-if(TARGET ${lib_namespace}::${lib_base_name})
-    set(lib_target "${lib_namespace}::${lib_base_name}")
-else()
-    set(lib_target "${lib_namespace}::${lib_base_name}-static")
-endif()
-target_link_libraries(${test_program}
-    PRIVATE
-        ${lib_target}
-)
-
-target_compile_features(${test_program} PRIVATE cxx_std_20)
+add_executable(example test_package.cpp)
+target_link_libraries(example arba::hash)
+# target_compile_features(${test_program} PRIVATE cxx_std_20)
