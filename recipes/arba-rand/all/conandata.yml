@@ -1,0 +1,7 @@
+sources:
+  "0.1.0":
+    url:
+      - "https://github.com/arapelle/arba-rand/archive/refs/tags/0.1.0.zip"
+      
+    sha256: "fd6cea877fc71ba71c46abff0afe9819efa60621f4d277b16be52b7bb4356fa9"
+    
