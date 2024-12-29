@@ -1,0 +1,7 @@
+sources:
+  "0.1.0":
+    url:
+      - "https://github.com/arapelle/arba-stdx/archive/refs/tags/0.1.0.zip"
+      
+    sha256: "73ffdbf719dad2ace31828b36171bdc4bdf57972b11f8d11eb1c07192610d85b"
+    
