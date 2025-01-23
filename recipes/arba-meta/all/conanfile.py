@@ -4,6 +4,7 @@ from conan import ConanFile
 from conan.tools.build import check_min_cppstd
 from conan.tools.cmake import CMakeToolchain, CMake, cmake_layout, CMakeDeps
 from conan.tools.files import copy, rmdir, apply_conandata_patches, export_conandata_patches, get
+from conan.tools.scm import Version
 
 required_conan_version = ">=2.2.0"
 
@@ -52,7 +53,10 @@ class ArbaMetaRecipe(ConanFile):
         check_min_cppstd(self, 20)
 
     def requirements(self):
-        self.requires("arba-vrsn/[^0.4]", transitive_headers=True, transitive_libs=True)
+        if Version(self.version) >= "0.3.0":
+            self.requires("arba-cppx/[^0.1]", transitive_headers=True, transitive_libs=True)
+        else:
+            self.requires("arba-vrsn/[^0.4]", transitive_headers=True, transitive_libs=True)
     
     def build_requirements(self):
         self.test_requires("gtest/[^1.14]")
