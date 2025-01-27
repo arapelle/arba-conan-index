@@ -63,8 +63,13 @@ if __name__ == '__main__':
     args = parser.parse_args()
     package_names = args.packages if len(args.packages) > 0 else [x for x in os.listdir(RECIPES_DIR)]
     print(f"""Treating {"all versions" if args.all else "latest version"} of the following packages: {package_names}""")
+    start_time = time.monotonic()
+    result = 0
     for package_name in package_names:
         if not test_package(package_name, args.all, args.test):
-            print("EXIT FAILURE")
-            sys.exit(1)
-    print("EXIT SUCCESS")
+            result = 1
+            break
+    duration = time.monotonic() - start_time
+    print(f"total duration: {duration:.03f} seconds")
+    print("EXIT SUCCESS" if result == 0 else "EXIT FAILURE")
+    sys.exit(result)
