@@ -4,3 +4,8 @@ sources:
       - "https://github.com/arapelle/arba-plug/archive/refs/tags/0.1.0.zip"
       
     sha256: "bb839fb0272c32eddf2e070a0fea33896616040ee34037ccb2ff0d66cf0d50e6"
+  "0.2.0":
+    url:
+      - "https://github.com/arapelle/arba-plug/archive/refs/tags/0.2.0.zip"
+      
+    sha256: "0d2669f732a8fc64027ed0954e457f65c078f1f3e6b74fbb580d04e7f8d752f0"
