@@ -4,4 +4,8 @@ sources:
       - "https://github.com/arapelle/arba-stdx/archive/refs/tags/0.1.0.zip"
       
     sha256: "73ffdbf719dad2ace31828b36171bdc4bdf57972b11f8d11eb1c07192610d85b"
-    
+  "0.2.0":
+    url:
+      - "https://github.com/arapelle/arba-stdx/archive/refs/tags/0.2.0.zip"
+      
+    sha256: "d5256ef9b27586ca66ea001bd3b6c726c7e443c1d4a7a178cc9270a09194da0a"

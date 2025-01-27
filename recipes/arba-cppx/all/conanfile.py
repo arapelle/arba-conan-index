@@ -4,34 +4,29 @@ from conan import ConanFile
 from conan.tools.build import check_min_cppstd
 from conan.tools.cmake import CMakeToolchain, CMake, cmake_layout, CMakeDeps
 from conan.tools.files import copy, rmdir, apply_conandata_patches, export_conandata_patches, get
-from conan.tools.scm import Version
 
 required_conan_version = ">=2.2.0"
 
-class ArbaStdxRecipe(ConanFile):
+class ArbaCppxRecipe(ConanFile):
     project_namespace = "arba"
-    project_base_name = "stdx"
+    project_base_name = "cppx"
     name = f"{project_namespace}-{project_base_name}"
-    package_type = "library"
+    package_type = "header-library"
 
     # Optional metadata
-    description = "A C++ library providing features extending the standard library."
-    url = "https://github.com/arapelle/arba-stdx"
-    homepage = "https://github.com/arapelle/arba-stdx"
-    topics = ("std")
+    description = "A C++ library providing essential features."
+    url = "https://github.com/arapelle/arba-cppx"
+    homepage = "https://github.com/arapelle/arba-cppx"
+    topics = ("C++", "version", "semver", "semantic-version", "preprocessor", "no-exceptions")
     license = "MIT"
     author = "Aymeric Pellé"
 
     # Binary configuration
     settings = "os", "compiler", "build_type", "arch"
     options = {
-        "shared": [True, False], 
-        "fPIC": [True, False],
         "test": [True, False]
     }
     default_options = {
-        "shared": True, 
-        "fPIC": True,
         "test": False
     }
 
@@ -40,7 +35,7 @@ class ArbaStdxRecipe(ConanFile):
     no_copy_source = True
 
     # Other
-    implements = ["auto_shared_fpic"]
+    implements = ["auto_header_only"]
 
     def export_sources(self):
         export_conandata_patches(self)
@@ -56,13 +51,6 @@ class ArbaStdxRecipe(ConanFile):
     def validate(self):
         check_min_cppstd(self, 20)
 
-    def requirements(self):
-        if Version(self.version) >= "0.2.0":
-            self.requires("arba-meta/[^0.3]", transitive_headers=True, transitive_libs=True)
-        else:
-            self.requires("arba-vrsn/[^0.4]", transitive_headers=True, transitive_libs=True)
-            self.requires("arba-meta/[^0.1]", transitive_headers=True, transitive_libs=True)
-
     def build_requirements(self):
         self.test_requires("gtest/[^1.14]")
 
@@ -70,17 +58,16 @@ class ArbaStdxRecipe(ConanFile):
         deps = CMakeDeps(self)
         deps.generate()
         tc = CMakeToolchain(self)
-        upper_name = f"{self.project_namespace}_{self.project_base_name}".upper()
-        tc.variables[f"{upper_name}_LIBRARY_TYPE"] = "SHARED" if self.options.shared else "STATIC"
         if self.options.test:
+            upper_name = f"{self.project_namespace}_{self.project_base_name}".upper()
             tc.variables[f"BUILD_{upper_name}_TESTS"] = "TRUE"
         tc.generate()
 
     def build(self):
         cmake = CMake(self)
         cmake.configure()
-        cmake.build()
         if self.options.test:
+            cmake.build()
             cmake.ctest(cli_args=["--progress", "--output-on-failure"])
 
     def package(self):
@@ -90,9 +77,6 @@ class ArbaStdxRecipe(ConanFile):
         rmdir(self, os.path.join(self.package_folder, "lib", "cmake"))
 
     def package_info(self):
-        postfix = "" if self.options.shared else "-static"
-        name = self.name + postfix
-        self.cpp_info.set_property("cmake_target_name", name.replace('-', '::', 1))
-        if self.settings.build_type == "Debug":
-            name += "-d"
-        self.cpp_info.libs = [name]
+        self.cpp_info.bindirs = []
+        self.cpp_info.libdirs = []
+        self.cpp_info.set_property("cmake_target_name", self.name.replace('-', '::'))
