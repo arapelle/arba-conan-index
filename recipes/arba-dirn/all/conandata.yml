@@ -1,0 +1,6 @@
+sources:
+  "0.5.0":
+    url:
+      - "https://github.com/arapelle/arba-dirn/archive/refs/tags/0.5.0.zip"
+      
+    sha256: "e981bce5b5bacd630be2225fa6e849aa1051b7bc9e4d2c592493d6354cc4ce9d"
