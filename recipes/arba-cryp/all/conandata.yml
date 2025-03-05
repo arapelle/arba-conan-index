@@ -1,0 +1,6 @@
+sources:
+  "0.4.0":
+    url:
+      - "https://github.com/arapelle/arba-cryp/archive/refs/tags/0.4.0.zip"
+      
+    sha256: "e9bf2276d4ab203d16b256ef11bd77db1820e300fddd125d476a945656f4fe01"
