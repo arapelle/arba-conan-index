@@ -1,0 +1,6 @@
+sources:
+  "0.3.0":
+    url:
+      - "https://github.com/arapelle/arba-inis/archive/refs/tags/0.3.0.zip"
+      
+    sha256: "458b182cf4ae000e3e1b721cc0ae6f5cadabc588633a7b40e665387524723316"
