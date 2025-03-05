@@ -1,0 +1,6 @@
+sources:
+  "0.6.0":
+    url:
+      - "https://github.com/arapelle/arba-seri/archive/refs/tags/0.6.0.zip"
+      
+    sha256: "853c743675e2d5e54beecfbf2941e247bfc1b6cfbbc4115c946337f257d7fb13"
