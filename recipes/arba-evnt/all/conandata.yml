@@ -1,0 +1,6 @@
+sources:
+  "0.6.0":
+    url:
+      - "https://github.com/arapelle/arba-evnt/archive/refs/tags/0.6.0.zip"
+      
+    sha256: "d5d9810788c09162c133023ac4cbccf482b3463ae737def00cf5b59d83a4d908"
