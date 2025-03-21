@@ -1,0 +1,6 @@
+sources:
+  "0.5.0":
+    url:
+      - "https://github.com/arapelle/arba-strn/archive/refs/tags/0.5.0.zip"
+      
+    sha256: "972bd94ea450048ce0d991d1e6e886bbc2238a000d983dca856ad4de2b0cb734"
