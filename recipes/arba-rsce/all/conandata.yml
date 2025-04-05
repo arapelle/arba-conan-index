@@ -1,0 +1,6 @@
+sources:
+  "0.4.0":
+    url:
+      - "https://github.com/arapelle/arba-rsce/archive/refs/tags/0.4.0.zip"
+      
+    sha256: "c87062d038f0e11f6d46fc8f4e061e82b07e8dd17924b9a1cdcbfa1d0626dfea"

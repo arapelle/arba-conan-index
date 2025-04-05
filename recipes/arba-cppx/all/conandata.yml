@@ -1,0 +1,6 @@
+sources:
+  "0.1.0":
+    url:
+      - "https://github.com/arapelle/arba-cppx/archive/refs/tags/0.1.0.zip"
+      
+    sha256: "2b69e4854c19e2d280c2325e1a95de4b316ad8c8bb2e34101191cc9ad54e8191"

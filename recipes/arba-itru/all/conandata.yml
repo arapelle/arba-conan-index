@@ -1,0 +1,6 @@
+sources:
+  "0.3.0":
+    url:
+      - "https://github.com/arapelle/arba-itru/archive/refs/tags/0.3.0.zip"
+      
+    sha256: "ff924bb5b7d82bba16ce02767609839ca074e9f635bc88b3aaee32aa0373938c"

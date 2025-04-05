@@ -1,0 +1,6 @@
+sources:
+  "0.29.0":
+    url:
+      - "https://github.com/arapelle/arba-core/archive/refs/tags/0.29.0.zip"
+      
+    sha256: "41a526e031f47622fb18166d6a035470fda913bf60b3e560b228bd75b1d086e6"

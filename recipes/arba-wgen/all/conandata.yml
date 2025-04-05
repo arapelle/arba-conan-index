@@ -1,0 +1,6 @@
+sources:
+  "0.3.0":
+    url:
+      - "https://github.com/arapelle/arba-wgen/archive/refs/tags/0.3.0.zip"
+      
+    sha256: "906a074882a22ad8714c22b0315e072da7d7725af884e6a48ab8e59579fea300"
