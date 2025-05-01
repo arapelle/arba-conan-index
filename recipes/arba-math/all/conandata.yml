@@ -4,3 +4,8 @@ sources:
       - "https://github.com/arapelle/arba-math/archive/refs/tags/0.6.0.zip"
       
     sha256: "ed0f1aea68dd59b2448fb319d1d7ffc4bca47840f34dd373ead7c20a884c6c6e"
+  "0.7.0":
+    url:
+      - "https://github.com/arapelle/arba-math/archive/refs/tags/0.7.0.zip"
+      
+    sha256: "595f1b5eee7703027eef5045475accf63413e71b68b1d65b6b1b4d4c6e14da8a"

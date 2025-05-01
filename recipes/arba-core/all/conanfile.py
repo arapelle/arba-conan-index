@@ -53,7 +53,10 @@ class ArbaCoreRecipe(ConanFile):
         check_min_cppstd(self, 20)
 
     def requirements(self):
-        self.requires("arba-cppx/[^0.1]", transitive_headers=True, transitive_libs=True)
+        if self.version >= Version("0.30.0"):
+            self.requires("arba-cppx/[^0.3]", transitive_headers=True, transitive_libs=True)
+        else:
+            self.requires("arba-cppx/[^0.1]", transitive_headers=True, transitive_libs=True)
         
     def build_requirements(self):
         self.test_requires("gtest/[^1.14]")
