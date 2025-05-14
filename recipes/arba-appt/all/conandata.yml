@@ -4,3 +4,8 @@ sources:
       - "https://github.com/arapelle/arba-appt/archive/refs/tags/0.15.0.zip"
       
     sha256: "aed71cc07f0256f475d01555a6b9b607d11230b67b96cf86b07d4dd6ae55cc16"
+  "0.16.0":
+    url:
+      - "https://github.com/arapelle/arba-appt/archive/refs/tags/0.16.0.zip"
+      
+    sha256: "d974549635b8e09502686019d96abad247e071aa9f90dce8d9c9680736793242"
