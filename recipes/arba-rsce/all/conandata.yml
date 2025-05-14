@@ -4,3 +4,8 @@ sources:
       - "https://github.com/arapelle/arba-rsce/archive/refs/tags/0.4.0.zip"
       
     sha256: "c87062d038f0e11f6d46fc8f4e061e82b07e8dd17924b9a1cdcbfa1d0626dfea"
+  "0.5.0":
+    url:
+      - "https://github.com/arapelle/arba-rsce/archive/refs/tags/0.5.0.zip"
+      
+    sha256: "f151f56f078040bcf8afcfd6ab8aa26b11eea3a5de56e369f1a1e5b5dbda0b94"
