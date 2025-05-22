@@ -4,3 +4,8 @@ sources:
       - "https://github.com/arapelle/arba-grid/archive/refs/tags/0.5.0.zip"
       
     sha256: "634bf21e3b1fa2b555ec676f4e1654835710f5c2f9d167e086d29be71c7f9e86"
+  "0.6.0":
+    url:
+      - "https://github.com/arapelle/arba-grid/archive/refs/tags/0.6.0.zip"
+      
+    sha256: "aa4cf932f483cce099034e7fa0aa75eb68a43d0a9098ef941285c607589e8526"

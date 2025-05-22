@@ -4,3 +4,8 @@ sources:
       - "https://github.com/arapelle/arba-dirn/archive/refs/tags/0.5.0.zip"
       
     sha256: "e981bce5b5bacd630be2225fa6e849aa1051b7bc9e4d2c592493d6354cc4ce9d"
+  "0.6.0":
+    url:
+      - "https://github.com/arapelle/arba-dirn/archive/refs/tags/0.6.0.zip"
+      
+    sha256: "852e3b633aaf34ec8514d06df058eb8986067185386c4d7fd56173fc2ff270ff"

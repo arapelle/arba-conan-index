@@ -4,3 +4,8 @@ sources:
       - "https://github.com/arapelle/arba-vlfs/archive/refs/tags/0.5.0.zip"
       
     sha256: "2e7b793dae10c6371906262f0241c8f87185dd5085b658951415bbd816dc4cfc"
+  "0.6.0":
+    url:
+      - "https://github.com/arapelle/arba-vlfs/archive/refs/tags/0.6.0.zip"
+      
+    sha256: "a9d605b36fbafc37193c37dfda93daf79c57636a9ae6702c285fd72208d3ef3f"
