@@ -1,0 +1,6 @@
+sources:
+  "0.1.0":
+    url:
+      - "https://github.com/arapelle/arba-dpat/archive/refs/tags/0.1.0.zip"
+      
+    sha256: "929201b972cbfc97449a96ca33384308ef5df99352ce524c8b4c576e87c11dca"
