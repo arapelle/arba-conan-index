@@ -25,10 +25,8 @@ class ArbaCoreRecipe(ConanFile):
     # Binary configuration
     settings = "os", "compiler", "build_type", "arch"
     options = {
-        "test": [True, False]
     }
     default_options = {
-        "test": False
     }
 
     # Build
@@ -53,7 +51,9 @@ class ArbaCoreRecipe(ConanFile):
         check_min_cppstd(self, 20)
 
     def requirements(self):
-        if self.version >= Version("0.30.0"):
+        if self.version >= Version("0.31.0"):
+            self.requires("arba-meta/[^0.6]", transitive_headers=True, transitive_libs=True)
+        elif self.version >= Version("0.30.0"):
             self.requires("arba-cppx/[^0.3]", transitive_headers=True, transitive_libs=True)
         else:
             self.requires("arba-cppx/[^0.1]", transitive_headers=True, transitive_libs=True)
@@ -65,7 +65,10 @@ class ArbaCoreRecipe(ConanFile):
         deps = CMakeDeps(self)
         deps.generate()
         tc = CMakeToolchain(self)
-        if self.options.test:
+        build_test = False
+        if self.version >= Version("0.31.0"):
+            build_test = not self.conf.get("tools.build:skip_test", default=True)
+        if build_test:
             upper_name = f"{self.project_namespace}_{self.project_base_name}".upper()
             tc.variables[f"BUILD_{upper_name}_TESTS"] = "TRUE"
         tc.generate()
@@ -73,7 +76,10 @@ class ArbaCoreRecipe(ConanFile):
     def build(self):
         cmake = CMake(self)
         cmake.configure()
-        if self.options.test:
+        build_test = False
+        if self.version >= Version("0.31.0"):
+            build_test = not self.conf.get("tools.build:skip_test", default=True)
+        if build_test:
             cmake.build()
             cmake.ctest(cli_args=["--progress", "--output-on-failure"])
 
