@@ -102,7 +102,7 @@ class TestSuite:
                     library_type_is_shared = library_type == "shared"
                     library_type_option = f"""-o "&:shared={library_type_is_shared}\""""
                 cmd = f"""conan create {recipe_path} --build=missing \\
-                --version {version} -s "&:build_type={build_type}" {library_type_option} -o "&:test={test}\""""
+                --version {version} -s "&:build_type={build_type}" {library_type_option} -c:a "&:tools.build:skip_test={not test}\""""
                 print(f"  .cmd: {cmd}")
                 cmd = cmd.replace("\\", "")
                 cmd = cmd.replace('"', "")
