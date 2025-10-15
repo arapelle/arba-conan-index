@@ -19,3 +19,8 @@ sources:
       - "https://github.com/arapelle/arba-meta/archive/refs/tags/0.6.0.zip"
       
     sha256: "ce3de1e028b922f62adc47dbb8e5819847ebf070a2d2de7734e72e7a948bdbe2"
+  "0.7.0":
+    url:
+      - "https://github.com/arapelle/arba-meta/archive/refs/tags/0.7.0.zip"
+      
+    sha256: "e4b65791f1c6e9244141ba0ebe76c1b37235787002b15acb310eb4e04b9c9e64"
