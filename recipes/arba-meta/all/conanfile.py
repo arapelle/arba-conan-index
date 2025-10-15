@@ -25,10 +25,8 @@ class ArbaMetaRecipe(ConanFile):
     # Binary configuration
     settings = "os", "compiler", "build_type", "arch"
     options = {
-        "test": [True, False]
     }
     default_options = {
-        "test": False
     }
 
     # Build
@@ -65,7 +63,10 @@ class ArbaMetaRecipe(ConanFile):
         deps = CMakeDeps(self)
         deps.generate()
         tc = CMakeToolchain(self)
-        if self.options.test:
+        build_test = False
+        if self.version >= Version("0.7.0"):
+            build_test = not self.conf.get("tools.build:skip_test", default=True)
+        if build_test:
             upper_name = f"{self.project_namespace}_{self.project_base_name}".upper()
             tc.variables[f"BUILD_{upper_name}_TESTS"] = "TRUE"
         tc.generate()
@@ -73,7 +74,10 @@ class ArbaMetaRecipe(ConanFile):
     def build(self):
         cmake = CMake(self)
         cmake.configure()
-        if self.options.test:
+        build_test = False
+        if self.version >= Version("0.7.0"):
+            build_test = not self.conf.get("tools.build:skip_test", default=True)
+        if build_test:
             cmake.build()
             cmake.ctest(cli_args=["--progress", "--output-on-failure"])
 
