@@ -14,3 +14,8 @@ sources:
       - "https://github.com/arapelle/arba-cppx/archive/refs/tags/0.3.0.zip"
       
     sha256: "80d132f451d63ace7fcedfa4de5d2d53a7e300eb04501ecfcf1a79b59e35a8bd"
+  "0.4.0":
+    url:
+      - "https://github.com/arapelle/arba-cppx/archive/refs/tags/0.4.0.zip"
+      
+    sha256: "a925cb2c59bb727697901db7a45adf9191a091cce9f93b4c01be3b956af7acc0"
