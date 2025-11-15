@@ -9,3 +9,8 @@ sources:
       - "https://github.com/arapelle/arba-rand/archive/refs/tags/0.3.0.zip"
       
     sha256: "f462963bd0fa40799367a46733fbb56d6a74f90ace4e745dd956222758000d3d"
+  "0.4.0":
+    url:
+      - "https://github.com/arapelle/arba-rand/archive/refs/tags/0.4.0.zip"
+      
+    sha256: "ff152c322f2a245cbedda25d67b920cf9e7fb3b527ec32e8e100fea59efe8b27"
