@@ -9,3 +9,8 @@ sources:
       - "https://github.com/arapelle/arba-hash/archive/refs/tags/0.3.0.zip"
       
     sha256: "bf93543a8ca09535a246a773fd57e88cd5ea469e67ced6f6e0afd9ccce01c3db"
+  "0.4.0":
+    url:
+      - "https://github.com/arapelle/arba-hash/archive/refs/tags/0.4.0.zip"
+      
+    sha256: "0ca72ecc2681517c4831bea0a723610a8e14b1f34f8d321d0c51fd1a4c4e95e0"
